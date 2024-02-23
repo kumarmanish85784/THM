@@ -1,0 +1,104 @@
+# Nmap 7.94SVN scan initiated Mon Jan 29 09:45:40 2024 as: nmap -sCV -vv -oN nmap_initial -Pn 10.10.156.0
+Nmap scan report for 10.10.156.0
+Host is up, received user-set (0.18s latency).
+Scanned at 2024-01-29 09:45:40 IST for 74s
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE SERVICE       REASON  VERSION
+139/tcp  open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds? syn-ack
+3389/tcp open  ms-wbt-server syn-ack Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: HOSTEVASION
+|   NetBIOS_Domain_Name: HOSTEVASION
+|   NetBIOS_Computer_Name: HOSTEVASION
+|   DNS_Domain_Name: HostEvasion
+|   DNS_Computer_Name: HostEvasion
+|   Product_Version: 10.0.17763
+|_  System_Time: 2024-01-29T04:16:12+00:00
+| ssl-cert: Subject: commonName=HostEvasion
+| Issuer: commonName=HostEvasion
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-01-28T04:11:28
+| Not valid after:  2024-07-29T04:11:28
+| MD5:   992e:91e9:0ad2:b7c5:4cbe:84ff:edb5:cb35
+| SHA-1: 6471:7a3b:f74d:bec2:40f5:18bb:86e1:59a5:65e7:fcb9
+| -----BEGIN CERTIFICATE-----
+| MIIC2jCCAcKgAwIBAgIQcjqnuMn3z6ZJkITim9cJ+TANBgkqhkiG9w0BAQsFADAW
+| MRQwEgYDVQQDEwtIb3N0RXZhc2lvbjAeFw0yNDAxMjgwNDExMjhaFw0yNDA3Mjkw
+| NDExMjhaMBYxFDASBgNVBAMTC0hvc3RFdmFzaW9uMIIBIjANBgkqhkiG9w0BAQEF
+| AAOCAQ8AMIIBCgKCAQEAnNhOAU9+0xy5pJK3+/j9FB7y2jokz/ArnQ00FXO63pj9
+| kbM6RuWd/AZBk41R4GCf/9xMvam5PYRtdLjCSxYCENWfDQyRcYJy8DkJUAxhdhkm
+| niTuXp29EX3tQ+aFTzSrRfvT9dlgjQdN5vCvuFVEJe2qZcHffQm9H63dBz6cQgWK
+| Eoag9a4BzO8q+/C6GiqnxyAGTC+LnmFzj8nr0fz6VW8YvK69uRudF2dOJnONPuwj
+| gJDV9TN7nuULZf70Ar+XN7XcmpdC87FJXkfEuwpnuoYaTzh/GAKlRqqG5fo/RknC
+| UCWJVgtORU+CXWVEZlgEhfj8GuzrY5/h2EAyC+uLXQIDAQABoyQwIjATBgNVHSUE
+| DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAA23
+| piXvsDukJ39ByYa7Za/ctxGl5xBXw1etzGs2zyGsbTuwU1awMt3+i5qfOfSiprHG
+| WOIxLfCojmY6nD9sQ38AW+yMl10NY6DRMkWDLrSOtz+sgtMEHd3QS8iCQ932VtoA
+| ziyulZ0tCGXsUmwD+C5WHY86fg4hq24N107DVCSqfEGlxYGR94DDCtNt3sbmsGr/
+| 70rJ4g+B3oqi29O38CY3OpKnwyX42aoNLpkgVpf5/M8hC3NhSq98VS5SmjgrTskt
+| OsPgmBA+qVCc5k4DiTFnc2BaYRQEmu3JkxJDJTp47Wx2Od8UH4qBW+C53fh/HMxL
+| yU/QmswWF8tmJRthDKk=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2024-01-29T04:16:52+00:00; 0s from scanner time.
+8000/tcp open  http          syn-ack PHP cli server 5.5 or later
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: 404 Not Found
+8080/tcp open  http          syn-ack Apache httpd 2.4.56 ((Win64) OpenSSL/1.1.1t PHP/8.0.28)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: PowerShell Script Analyser
+8443/tcp open  ssl/http      syn-ack Apache httpd 2.4.56 ((Win64) OpenSSL/1.1.1t PHP/8.0.28)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| tls-alpn: 
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4:4cc9:9e84:b26f:9e63:9f9e:d229:dee0
+| SHA-1: b023:8c54:7a90:5bfa:119c:4e8b:acca:eacf:3649:1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+|_http-title: PowerShell Script Analyser
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 26028/tcp): CLEAN (Timeout)
+|   Check 2 (port 42903/tcp): CLEAN (Timeout)
+|   Check 3 (port 43458/udp): CLEAN (Timeout)
+|   Check 4 (port 55071/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-time: 
+|   date: 2024-01-29T04:16:13
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jan 29 09:46:54 2024 -- 1 IP address (1 host up) scanned in 74.24 seconds
